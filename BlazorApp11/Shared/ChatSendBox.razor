@@ -1,0 +1,9 @@
+﻿<form @onsubmit="Click">
+    <div class="input-group">
+        <input @ref="input" @bind-value="@Value" disabled="@IsDisabled" type="text" class="form-control" 
+         placeholder="@Placeholder" aria-label="@Placeholder" aria-describedby="button-addon">
+        <div class="input-group-append">
+            <button disabled="@IsDisabled" class="btn btn-primary" type="submit" id="button-addon" >@Label</button>
+        </div>
+    </div>
+</form>

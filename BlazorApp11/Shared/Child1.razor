@@ -1,0 +1,19 @@
+﻿ <input type="text" @bind="@message" />
+
+    <button @onclick="ChangePassword">Parent button</button>
+
+@code {
+    private string message;
+    
+    [Parameter]
+    public string Message {get; set;}
+       
+    [Parameter]
+    public EventCallback<string> OnClickCallback {get; set;}
+
+    
+    private async Task ChangePassword()
+    {
+        await OnClickCallback.InvokeAsync(message);
+    }
+}

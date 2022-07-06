@@ -1,0 +1,9 @@
+﻿@page "/parent"
+@layout MainLayout
+
+<ChatSendBox Label="Send"
+             Placeholder="Input message" 
+             @bind-Value=@message
+             OnClick="OnClick"
+             @ref=chatSendBox />
+<h3>@message</h3>

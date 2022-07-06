@@ -1,0 +1,15 @@
+﻿@page "/counter"
+
+<PageTitle>Counter</PageTitle>
+
+<Child1 Message="message" OnClickCallback="@ShowMessage" />
+<p>@message</p>
+
+@code {
+
+    private string? message;
+    private void ShowMessage(string _message)
+    {
+        message = _message;
+    }
+}
